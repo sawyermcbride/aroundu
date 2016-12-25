@@ -2,7 +2,7 @@ const path  = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-    entry: './src/js/main.jsx',
+    entry: './src/react-js/main.jsx',
     output: {
         path: './bin',
         filename: 'bundle.js'
@@ -10,9 +10,9 @@ module.exports = {
     modules: {
         loaders: [
             {
-                test: "/\.jsx?/",
-                include: './src/js'
-                loader: 'babel'
+                test: "/\.jsx$/",
+                include: './src/react-js',
+                loader: 'babel-loader'
             }
         ]
     }
